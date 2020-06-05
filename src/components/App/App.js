@@ -62,7 +62,9 @@ class App extends React.Component {
           Ja<span className="highlight">mmm</span>ing
         </h1>
         <div className="App">
-          <SearchBar />
+          <SearchBar 
+          onSearch={this.search} 
+          />
           <div className="App-playlist">
             <SearchResults
               searchResults={this.state.searchResults}
@@ -75,7 +77,6 @@ class App extends React.Component {
               onNameChange={this.updatePlaylistName}
               onChange={this.props.onChange}
               onSave={this.savePlaylist}
-              onSearch={this.search}
             />
           </div>
         </div>
