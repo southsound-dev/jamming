@@ -6,8 +6,10 @@ class SearchBar extends React.Component {
         super(props)
         this.search = this.search.bind(this);
         this.handleTermChange = this.handleTermChange.bind(this);
-        // FEATURE REQUEST Search onKeyDown
+        // FEATURE REQUEST Search Return Key
         this.handlePressEnter = this.handlePressEnter.bind(this);
+        // FEATURE REQUEST Search onKeyUp
+        this.handleKeyPressed = this.handleKeyPressed.bind(this);
     }
 
 // FEATURE REQUEST Search onKeyDown
@@ -15,6 +17,13 @@ class SearchBar extends React.Component {
 handlePressEnter(event) {
     if (event.keyCode === 13)
     this.search();
+}
+
+// FEATURE REQUEST Search onKeyUp
+
+handleKeyPressed(event) {
+    if (event.keyCode)
+    this.search()
 }
 
 
@@ -36,6 +45,7 @@ handleTermChange(event) {
   placeholder="Enter A Song, Album, or Artist" 
   onChange={this.handleTermChange}
   onKeyDown={this.handlePressEnter}
+  onKeyUp={this.handleKeyPressed}
   />
   <button 
   className="SearchButton"

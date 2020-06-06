@@ -49,4 +49,27 @@ h2 {
     align-items: center;
     flex-direction: column;
   }
+  .App {
+    padding: 0px;
+    
+  }
+  .SearchBar {
+    margin-bottom: 20px !important;
+    flex-direction: row !important;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px !important;
+    margin: 0 15px;
+  }
+  .SearchBar input {
+    width: 100% !important;
+    border-radius: 5px;
+    margin-bottom: 0px !important;
+    padding: 10px !important;
+  }
+
+  .SearchButton {
+    margin-left: 5px !important;
+    padding: 13px !important;
+  }
 }
