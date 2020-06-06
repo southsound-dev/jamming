@@ -25,6 +25,11 @@ class App extends React.Component {
     if (tracks.find((savedTrack) => savedTrack.id === track.id)) {
       return;
     }
+    this.setState(
+      { searchResults: this.state.searchResults.filter(
+        (savedTrack) => savedTrack.id !== track.id
+      ) }
+    )
 
     tracks.push(track);
     this.setState({ playlistTracks: tracks });
