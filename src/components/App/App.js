@@ -25,14 +25,17 @@ class App extends React.Component {
     if (tracks.find((savedTrack) => savedTrack.id === track.id)) {
       return;
     }
+    // REMOVE TRACKS ADDED TO THE PLAYLIST
     this.setState(
       { searchResults: this.state.searchResults.filter(
         (savedTrack) => savedTrack.id !== track.id
       ) }
     )
-
     tracks.push(track);
     this.setState({ playlistTracks: tracks });
+
+    
+
   }
 
   removeTrack(track) {

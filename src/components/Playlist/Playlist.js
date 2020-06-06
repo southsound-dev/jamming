@@ -27,7 +27,9 @@ class Playlist extends React.Component {
                 <button 
                 className="Playlist-save"
                 onClick={this.props.onSave}
+                className={this.props.isSavingPlaylist ? 'Playlist-save-disable' : 'Playlist-save'}
                 >SAVE TO SPOTIFY</button>
+                
             </div>
         )
     }
