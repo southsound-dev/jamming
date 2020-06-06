@@ -1,5 +1,6 @@
 let clientId = "9ad9e95d42c942d28ffd70545e4ea4db";
-const redirectUri = "http://localhost:3000/ ";
+// const redirectUri = "http://hungry-help.surge.sh";
+const redirectUri = "http://localhost:3000";
 let accessToken;
 
 const Spotify = {
